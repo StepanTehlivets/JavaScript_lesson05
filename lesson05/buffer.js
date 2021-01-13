@@ -1,20 +1,19 @@
 function makeBuffer(){
 	var array=[];
-	let array1;
+	
 	return{
 		add: function(value){
 			array.push(value);
-			array1= array.join();
-			while(array1.includes(',')){
-				array1 = array1.replace(',', '')
-			}
-			return array1;
+			return array;
 		},
 		print: function(){
+			let array1= array.join();
+			while(array1.includes(',')){
+				array1 = array1.replace(',', ' ')
+			}
 			return console.log(array1);
 		},
 		clear: function(){
-			array1 ='';
 			return  array.length=0;
 		
 		
@@ -23,7 +22,7 @@ function makeBuffer(){
 }
 var buffer = makeBuffer(); 
 buffer.add( 'JavaScript');
-buffer.add( 'We Need ');
+buffer.add( 'We Need');
 buffer.add( 'To Learn!'); 
 
 buffer.print(); 
